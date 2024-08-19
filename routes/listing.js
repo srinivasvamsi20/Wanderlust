@@ -4,7 +4,6 @@ const wrapAsync = require("../utils/wrapAsync.js");
 const listingController = require("../controllers/listing.js");
 const multer = require("multer");
 const Listing = require("../models/listing.js");
-// const upload = multer({ dest: "uploads/" });
 const multerS3 = require("multer-s3");
 const { S3Client } = require("@aws-sdk/client-s3");
 const AWS = require("aws-sdk");
@@ -36,7 +35,7 @@ const upload = multer({
     },
   }),
 });
-// Set up multer to use multer-s3
+
 
 router
   .route("/")
